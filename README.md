@@ -45,3 +45,14 @@ mutation {
   }
 }
 ```
+
+To delete a place:
+```
+mutation {
+  deletePlace(id: 1) {
+    id
+  }
+}
+```
+
+You may receive an unhandled Ecto.NoResultsError if the record you are trying to update or delete could not be found, will be resolved in a future update.
