@@ -7,9 +7,9 @@ To start your Phoenix server:
   * Create and migrate your database with `mix ecto.setup`
   * Start Phoenix endpoint with `mix phx.server`
 
-Now you can visit [`localhost:4000/api/graphiql`](http://localhost:4000/api/graphiql) from your browser.
+Now you can visit [`localhost:4000/graphiql`](http://localhost:4000/api/graphiql) from your browser to use the playground.
 
-New to GraphQL? Try the following queries in the GraphiQL interface, or click Docs to navigate available queries:
+New to GraphQL? Try the following queries in the GraphQL playground, or click Schema in the playground to explore
 
 To get all places:
 ```

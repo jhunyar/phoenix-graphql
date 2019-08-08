@@ -5,13 +5,14 @@ defmodule GetawaysWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api" do
+  scope "/" do
     pipe_through :api
 
-    forward "/graphiql", Absinthe.Plug.GraphiQL,
+    forward "/api", Absinthe.Plug,
       schema: GetawaysWeb.Schema.Schema
 
-    forward "/", Absinthe.Plug,
-      schema: GetawaysWeb.Schema.Schema
+    forward "/graphiql", Absinthe.Plug.GraphiQL,
+      schema: GetawaysWeb.Schema.Schema,
+      interface: :playground
   end
 end
