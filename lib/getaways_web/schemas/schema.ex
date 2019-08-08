@@ -29,6 +29,12 @@ defmodule GetawaysWeb.Schema.Schema do
       arg :place, :update_place_args
       resolve &GetawaysWeb.Resolvers.Vacation.update_place/3
     end
+
+    @desc "Delete a place"
+    field :delete_place, type: :place do
+      arg :id, non_null(:id)
+      resolve &GetawaysWeb.Resolvers.Vacation.delete_place/3
+    end
   end
 
   object :place do

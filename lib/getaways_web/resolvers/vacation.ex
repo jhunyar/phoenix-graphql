@@ -18,4 +18,9 @@ defmodule GetawaysWeb.Resolvers.Vacation do
     place = Repo.get!(Vacation.Place, id)
     Vacation.update_place(place, place_args)
   end
+
+  def delete_place(_parent, %{id: id}, _context) do
+    place = Repo.get!(Vacation.Place, id)
+    Vacation.delete_place(place)
+  end
 end
